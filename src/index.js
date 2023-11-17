@@ -12,7 +12,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());   // for cross origin permission
+app.use(cors({ origin: '*' }));   // for cross origin permission
 
 const port = 5000;
 const Pool = require('pg').Pool;

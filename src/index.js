@@ -12,19 +12,20 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: '*' }));   // for cross origin permission
+app.use(cors());   // for cross origin permission
 
 const port = 5000;
 const Pool = require('pg').Pool;
 
-//Enter here your Postres database details
+//Enter here your Postgres database details
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'node_react_project',
-    password: 'Arshil@2001',
+    user: 'ijxuneuq',
+    host: 'suleiman',
+    database: 'FocusFlow DB',
+    password: 'SiIufC3ptpPLgHOKVXHUONlx8gfT8kFA',
     dialect: 'postgres',
-    port: 5432
+    port: 5432,
+    ssl: { rejectUnauthorized: false }  //for elephantSQL
 });
   
   //Database connection 

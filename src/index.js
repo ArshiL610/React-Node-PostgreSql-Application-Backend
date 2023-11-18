@@ -1,53 +1,61 @@
 const express = require('express');
+// const serverless = require('serverless-http');
 // encrypting password imports
 const bcrypt = require('bcrypt');
 const { hashPassword, verifyPassword } = require('./passwordUtils');
 
 // nodemailer package import for email sending feature
 const nodemailer = require('nodemailer');
-// const randomstring = require('randomstring');
 
 //solve cors issue import
 const cors = require("cors");
 
 const app = express();
+app.use(cors({origin:'*'})); 
 app.use(express.json());
-app.use(cors(
-        { 
-          origin:'https://focusflow244.netlify.app/'
-        }
-          ));   // for cross origin permission
+
 
 const port = 5000;
 const Pool = require('pg').Pool;
 
 //Enter here your Postgres database details
 const pool = new Pool({
-    user: 'ijxuneuq',
-    host: 'suleiman',
-    database: 'FocusFlow DB',
-    password: 'SiIufC3ptpPLgHOKVXHUONlx8gfT8kFA',
+    user: 'postgres',
+    host: 'localhost',
+    database: 'node_react_project',
+    password: 'Arshil@2001',
     dialect: 'postgres',
-    port: 5432,
-    ssl: { rejectUnauthorized: false }  //for elephantSQL
+    port: 5432
 });
   
-  //Database connection 
+
+// Database connection
 pool.connect((err, client, release) => {
-    if (err) {
-        return console.error(
-            'Error acquiring client', err.stack)
-    }
-    client.query('SELECT NOW()', (err, result) => {
-        release()
-        if (err) {
-            return console.error(
-                'Error executing query', err.stack)
-        }
-        console.log("Connected to Database !")
-    })
-})
-  
+  if (err) {
+      console.error('Error acquiring client:', err.stack);
+      return;
+  }
+
+  client.query('SELECT NOW()', (err, result) => {
+      release();
+      if (err) {
+          console.error('Error executing query:', err.stack);
+          return;
+      }
+
+      console.log("Connected to Database!");
+      console.log("Current timestamp from the database:", result.rows[0].now);
+  });
+});
+
+// Handle database connection errors
+pool.on('error', (err, client) => {
+  console.error('Unexpected error on idle client', err);
+  process.exit(-1);
+});
+
+
+
 //get all users
 app.get('/get/users/all', (req, res, next) => {
     console.log("TEST DATA :");
@@ -447,3 +455,6 @@ app.post('/addReview/reviews',(req,res) => {
 app.listen(port, () => {
   console.log(`React-Node App is running on port ${port}.`);
 });
+
+// app.use('./netlify/functions/index');
+// module.exports.handler = serverless(app);

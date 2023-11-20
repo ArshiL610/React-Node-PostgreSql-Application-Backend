@@ -15,7 +15,7 @@ The backend is responsible for handling user authentication, task management, an
 
 ### Installation
 1. Clone the repository:
-   ```bash
+   ```powershell
    git clone https://github.com/ArshiL610/React-Node-PostgreSql-Application.git
    cd backend
 

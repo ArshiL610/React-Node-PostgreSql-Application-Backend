@@ -20,10 +20,10 @@ const Pool = require('pg').Pool;
 
 //Enter here your Postgres database details
 const pool = new Pool({
-    user: 'postgres',
+    user: 'enter-postgressql-username',
     host: 'localhost',
-    database: 'node_react_project',
-    password: 'Arshil@2001',
+    database: 'enter-your-database-name',
+    password: 'enter-your-database-passwrod',
     dialect: 'postgres',
     port: 5432
 });

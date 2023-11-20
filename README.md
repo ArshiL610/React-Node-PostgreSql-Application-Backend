@@ -15,18 +15,18 @@ The backend is responsible for handling user authentication, task management, an
 
 ### Installation
 1. Clone the repository:
-   ```code
+   ```powershell
    git clone https://github.com/ArshiL610/React-Node-PostgreSql-Application.git
    cd backend
 
 2. Install dependencies as well as the dev dependencies
-   ```bash
+   ```powershell
    npm install
 
 3. Configure the database connection settings in the `index.js` file.
 
 4. Run the server
-   ```bash
+   ```powershell
    npm run serve
 
 5. The backend server will be running at http://localhost:5000 as specified in the script in `index.js`, you may change it according to you.

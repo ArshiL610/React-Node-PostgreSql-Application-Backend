@@ -75,13 +75,13 @@ app.post('/post/user', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'focusflow244@gmail.com',
-        pass: 'injhzqgiyoqecpzu',
+        user: 'enter-gmail-id',
+        pass: 'enter-app-specific-password',
       },
     });
 
     const mailOptions = {
-      from: 'focusflow244@gmail.com',
+      from: 'enter-from-email-id',
       to: email,
       subject: 'Welcome to Focus Flow - Your Note-Taking Companion!',
       text: `Dear ${name},
@@ -305,13 +305,13 @@ app.post('/send-otp', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'focusflow244@gmail.com',
-      pass: 'injhzqgiyoqecpzu',
+      user: 'enter-email-id',
+      pass: 'enter-app-specific-password',
     },
   });
 
   const mailOptions = {
-    from: 'focusflow244@gmail.com',
+    from: 'enter-from-email-id',
     to: email,
     subject: 'OTP for Password Reset',
     text: `Your OTP for password reset is: ${otp}`,
@@ -387,14 +387,14 @@ app.put('/reset-password', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'focusflow244@gmail.com',
-      pass: 'injhzqgiyoqecpzu',
+      user: 'enter-email-id',
+      pass: 'enter-app-specific-password',
     },
   });
 
   try {
     const mailOptions = {
-      from: 'focusflow244@gmail.com',
+      from: 'enter-from-email-id',
       to: email,
       subject: 'Password Update Notification - Focus Flow',
       text: `Dear User,

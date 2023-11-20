@@ -13,6 +13,11 @@ The backend is responsible for handling user authentication, task management, an
 - Node.js and npm installed
 - PostgreSQL database
 
+## Repositories
+
+- Frontend Repo: https://github.com/ArshiL610/React-Node-PostgreSql-Application.git
+- Backend Repo: https://github.com/ArshiL610/React-Node-PostgreSql-Application-Backend.git
+
 ### Installation
 1. Clone the repository:
    ```powershell

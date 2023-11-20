@@ -40,7 +40,7 @@ The backend is responsible for handling user authentication, task management, an
 
 ## Database
 
-The backend uses a PostgreSQL database to store user information and notes. Refer to [Database.md]() for database schema information.
+The backend uses a PostgreSQL database to store user information and notes. Refer to [Database.md](https://github.com/ArshiL610/React-Node-PostgreSql-Application-Backend/blob/master/Database_ERD.md) for database schema information.
 
 ## Contributing
 

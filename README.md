@@ -38,9 +38,9 @@ The backend is responsible for handling user authentication, task management, an
    ![image](https://github.com/ArshiL610/React-Node-PostgreSql-Application-Backend/assets/91752244/398ab4d5-01a8-4ee3-a737-46c1819f166a)
    upon successful server conenction
    
-5. The backend server will be running at http://localhost:5000 as specified in the script in `index.js`, you may change it according to you.
+6. The backend server will be running at http://localhost:5000 as specified in the script in `index.js`, you may change it according to you.
 
-6. To test the backend server, use `Postman`.
+7. To test the backend server, use `Postman`.
 
 ## Database
 
